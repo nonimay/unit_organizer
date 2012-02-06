@@ -29,8 +29,20 @@
   </div>
   <%= f.fields_for :address do |address| %>
     <div class="field">
-      <%= address.label "Line 1" %><br />
+      <%= address.label :line1 %><br />
       <%= address.text_field :line1 %>
+    </div>
+    <div class="field">
+      <%= address.label :line2 %><br />
+      <%= address.text_field :line2 %>
+    </div>
+    <div class="field">
+      <%= address.label :town %><br />
+      <%= address.text_field :town %>
+    </div>
+    <div class="field">
+      <%= address.label :postcode %><br />
+      <%= address.text_field :postcode %>
     </div>
   <% end %>
   <div class="actions">

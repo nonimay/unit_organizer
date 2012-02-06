@@ -47,6 +47,7 @@ describe MembersController do
     it "assigns a new member as @member" do
       get :new
       assigns(:member).should be_a_new(Member)
+      assigns(:member[:address]).should be_a_new(Address)
     end
   end
 

@@ -25,6 +25,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'libnotify'
+  gem 'pry'
 end
 
 group :test do

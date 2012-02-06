@@ -21,8 +21,11 @@
 </p>
 
 <p>
-  <b>Addressable:</b>
-  <%= @member.addressable %>
+  <b>Address:</b>
+  <%= @member.address.line1 %><br/>
+  <%= @member.address.line2 %><br/>
+  <%= @member.address.town %><br/>
+  <%= @member.address.postcode %><br/>
 </p>
 
 
