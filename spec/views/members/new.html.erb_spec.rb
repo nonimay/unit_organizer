@@ -6,7 +6,11 @@ describe "members/new.html.erb" do
       :firstname => "MyString",
       :lastname => "MyString",
       :member_id => 1,
-      :addressable => nil
+      :address => stub_model(Address,
+      :line1 => "line1",
+      :line2 => "line2",
+      :postcode => "postocde",
+      :town => "town")
     ).as_new_record)
   end
 
@@ -18,7 +22,6 @@ describe "members/new.html.erb" do
       assert_select "input#member_firstname", :name => "member[firstname]"
       assert_select "input#member_lastname", :name => "member[lastname]"
       assert_select "input#member_member_id", :name => "member[member_id]"
-      assert_select "input#member_addressable", :name => "member[addressable]"
     end
   end
 end

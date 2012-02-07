@@ -6,7 +6,11 @@ describe "members/show.html.erb" do
       :firstname => "Firstname",
       :lastname => "Lastname",
       :member_id => 1,
-      :addressable => nil
+      :address => stub_model(Address,
+      :line1 => "line1",
+      :line2 => "line2",
+      :postcode => "postocde",
+      :town => "town")
     ))
   end
 

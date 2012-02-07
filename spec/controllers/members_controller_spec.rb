@@ -24,7 +24,10 @@ describe MembersController do
   # Member. As you add validations to Member, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    { :firstname => "fiona",
+      :lastname => "McDonald",
+      :dob => Date.today,
+      :member_id => 999}
   end
 
   describe "GET index" do
@@ -46,8 +49,9 @@ describe MembersController do
   describe "GET new" do
     it "assigns a new member as @member" do
       get :new
-      assigns(:member).should be_a_new(Member)
-      assigns(:member[:address]).should be_a_new(Address)
+      member = assigns(:member)
+      member.should be_a_new(Member)
+      member.address.should be_a_new(Address)
     end
   end
 
